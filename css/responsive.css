@@ -869,9 +869,14 @@ p {
 }
 /*slider-2*/
 .slider2-title-1,
-.slider2-title-4,
-.nivo-controlNav {
-  display: none;
+.slider2-title-4{
+  /* display: none; */
+  font-size: 11px;
+  line-height: 19px;
+  margin-top: 8px;
+}
+.nivo-controlNav{
+  display: none !important;
 }
 .slider2-title-2 {
   font-size: 13px;
