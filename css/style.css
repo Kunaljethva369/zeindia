@@ -926,7 +926,7 @@
   position: relative;
   z-index: 10;
   height: 400px;
-  background-image: url(/images/Assets/about-hero-bg.jpg);
+  background-image: url(/images/Assets/about-hero-bg.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
