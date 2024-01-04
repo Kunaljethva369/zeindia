@@ -83,10 +83,6 @@ function constructProdGrid(productList) {
             '</div>'
         document.getElementById('product-list').innerHTML = myvar;
     });
-    if(productList.length > 0){
-        document.getElementById('heading').classList.remove('d-none')
-        document.getElementById('sub-heading').classList.remove('d-none')
-    }
     // productList.forEach((element) => {
 
     //     const card = document.createElement("div");
