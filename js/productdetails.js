@@ -35,12 +35,13 @@ const request = {
 })();
 
 function setProductData(data) {
+    let currentItem = JSON.parse(localStorage.getItem('CurrentProduct'));
     document.getElementsByClassName("breadcrumbs-title")[0].innerHTML = data.name;
     document.getElementById('modelName').innerHTML = data.modelNumber;
     document.getElementById('name').innerHTML = data.name;
     document.getElementById('shortDescription').innerHTML = data.shortDescription;
-    document.getElementById('img').src = data.document[1].url;
-    document.getElementById('pdflink').href = data.document[0].url;
+    document.getElementById('img').src = data.document[1].url || data.document[0].url;
+    document.getElementById('pdflink').href = data.document[0].url || data.document[1].url;
 
     let myvar = '';
     data.specification.forEach(function (ele) {
@@ -62,4 +63,29 @@ function setProductData(data) {
             '</div>';
         document.getElementById('product-des').innerHTML = myvar;
     });
+
+    if(Object.keys(data).length > 0){
+        document.querySelector('.reviews-tab').classList.remove('d-none');
+        document.querySelector('.uppercase').classList.remove('d-none');
+    }
+
+    let myvar2 = '';
+    currentItem.forEach(element => {
+        element.productId == request.productId ? '' : 
+        myvar2 += '<div class="col-lg-4 col-md-6 mt-20">' +
+            '<div class="product-item">' +
+            '<div class="product-img">' +
+            '<a href="/productdetails.html?id='+ element.productId +'">' +
+            '<img src="'+ element.imageUrl[0] +'" alt="" />' +
+            '</a>' +
+            '</div>' +
+            '<div class="product-info">' +
+            '<h6 class="product-title">' +
+            '<a href="/productdetails.html?id='+ element.productId +'">' + element.modelNumber + '</a>' +
+            '</h6>' +
+            '</div>' +
+            '</div>' +
+            '</div>'
+        document.getElementById('product-list').innerHTML = myvar2;
+    });    
 }

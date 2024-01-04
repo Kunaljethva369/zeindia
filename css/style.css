@@ -164,6 +164,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .product-item .product-img{
+    display: block;
+  }
 }
 
 .product-item {
@@ -2338,4 +2342,16 @@ table {
 
 .breadcrumbs-section .breadcrumbs .container-fluid .row>* {
   padding: 0px;
+}
+
+#product-list .product-item:hover{
+  box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.15);
+}
+
+.widget .product-cat .treeview .collapsable > a{
+  color: #999999;
+}
+
+.widget .product-cat .treeview .collapsable > a:hover{
+  color: #ff7f00;
 }

@@ -197,3 +197,11 @@ a:hover {
 .bg-shape:hover:before {
  background: #ff7f00 none repeat scroll 0 0;
 }
+
+.widget .product-cat .treeview .collapsable > a{
+  color: #999999;
+}
+
+.widget .product-cat .treeview .collapsable > a:hover{
+  color: #ff7f00;
+}

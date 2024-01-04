@@ -63,9 +63,12 @@ const request = {
 })();
 
 function constructProdGrid(productList) {
+    let currentProduct = productList;
+    localStorage.setItem('CurrentProduct',JSON.stringify(currentProduct));
     let myvar = '';
     productList.forEach(element => {
-        myvar += '<div class="product-item">' +
+        myvar += '<div class="col-lg-4 col-md-6 mt-20">' +
+            '<div class="product-item">' +
             '<div class="product-img">' +
             '<a href="/productdetails.html?id='+ element.productId +'">' +
             '<img src="'+ element.imageUrl[0] +'" alt="" />' +
@@ -75,6 +78,7 @@ function constructProdGrid(productList) {
             '<h6 class="product-title">' +
             '<a href="/productdetails.html?id='+ element.productId +'">' + element.modelNumber + '</a>' +
             '</h6>' +
+            '</div>' +
             '</div>' +
             '</div>'
         document.getElementById('product-list').innerHTML = myvar;
