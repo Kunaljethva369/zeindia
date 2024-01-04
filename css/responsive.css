@@ -870,7 +870,7 @@ p {
 /*slider-2*/
 .slider2-title-1,
 .slider2-title-4{
-  /* display: none; */
+  display: none;
   font-size: 11px;
   line-height: 19px;
   margin-top: 8px;
