@@ -87,5 +87,17 @@ function setProductData(data) {
             '</div>' +
             '</div>'
         document.getElementById('product-list').innerHTML = myvar2;
+    });
+    $('.active-related-product').slick({
+        speed: 700,
+        arrows: false,
+        dots: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {  breakpoint: 991,   settings: { slidesToShow: 2,  }  },
+            {  breakpoint: 767,   settings: { slidesToShow: 1, }   },
+            {  breakpoint: 479,   settings: { slidesToShow: 1, }   },
+        ]
     });    
 }
