@@ -49,6 +49,7 @@ const request = {
         headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*"
         },
         body: JSON.stringify(request),
     })
