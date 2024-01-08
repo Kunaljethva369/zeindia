@@ -44,7 +44,7 @@ const request = {
 (async () => {
     fetch(uri, {
         method: "POST",
-        mode: "cors",
+        // mode: "cors",
         referrerPolicy: "no-referrer",
         headers: {
             Accept: "application/json",
