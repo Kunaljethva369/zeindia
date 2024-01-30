@@ -176,8 +176,8 @@
 }
 
 .product-img img {
-  width: auto;
-  height: 297px;
+  width: 100%;
+  /* height: 297px; */
 }
 
 .product-info {
@@ -2358,4 +2358,14 @@ table {
 
 .widget .product-cat .treeview .collapsable > a:hover{
   color: #ff7f00;
+}
+
+.productlist-img{
+  background: #EBECE9;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.productlist-img img{
+  height: 300px;
 }

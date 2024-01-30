@@ -71,7 +71,7 @@ function constructProdGrid(productList) {
         myvar += '<div class="col-lg-4 col-md-6 mt-20">' +
             '<div class="product-item">' +
             '<div class="product-img">' +
-            '<a href="/productdetails.html?id='+ element.productId +'">' +
+            '<a class="productlist-img" href="/productdetails.html?id='+ element.productId +'">' +
             '<img src="'+ element.imageUrl[0] +'" alt="" />' +
             '</a>' +
             '</div>' +
