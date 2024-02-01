@@ -41,7 +41,7 @@ function setProductData(data) {
     document.getElementById('modelName').innerHTML = data.modelNumber;
     document.getElementById('name').innerHTML = data.name;
     document.getElementById('shortDescription').innerHTML = data.shortDescription;
-    document.getElementById('img').src = data.document[1].url || data.document[0].url;
+    document.getElementById('img').src = data.document[0].url || data.document[1].url;
     document.getElementById('pdflink').href = data.document[0].url || data.document[1].url;
 
     let myvar = '';
@@ -75,8 +75,8 @@ function setProductData(data) {
         element.productId == request.productId ? '' : 
         myvar2 += '<div class="col-lg-4 col-md-6 mt-20">' +
             '<div class="product-item">' +
-            '<div class="product-img">' +
-            '<a href="/productdetails.html?id='+ element.productId +'">' +
+            '<div class="product-img list">' +
+            '<a class="productlist-img" href="/productdetails.html?id='+ element.productId +'">' +
             '<img src="'+ element.imageUrl[0] +'" alt="" />' +
             '</a>' +
             '</div>' +

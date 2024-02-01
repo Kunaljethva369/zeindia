@@ -70,7 +70,7 @@ function constructProdGrid(productList) {
     productList.forEach(element => {
         myvar += '<div class="col-lg-4 col-md-6 mt-20">' +
             '<div class="product-item">' +
-            '<div class="product-img">' +
+            '<div class="product-img list">' +
             '<a class="productlist-img" href="/productdetails.html?id='+ element.productId +'">' +
             '<img src="'+ element.imageUrl[0] +'" alt="" />' +
             '</a>' +

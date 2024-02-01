@@ -165,7 +165,7 @@
     justify-content: center;
   }
 
-  .product-item .product-img{
+  .product-item .product-img {
     display: block;
   }
 }
@@ -908,7 +908,8 @@
 .breadcrumbs-section {}
 
 .breadcrumbs {
-  background: #f6f6f6 url("img/breadcrumb/1.png") no-repeat scroll center center;
+  background: #f6f6f6 url("../images/Assets/hero-overlay.webp") no-repeat scroll center center;
+  background-size: cover;
 }
 
 .abt .breadcrumbs {
@@ -2350,24 +2351,37 @@ table {
   padding: 0px;
 }
 
-#product-list .product-item:hover{
+#product-list .product-item:hover {
   box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.15);
 }
 
-.widget .product-cat .treeview .collapsable > a{
+.widget .product-cat .treeview .collapsable>a {
   color: #999999;
 }
 
-.widget .product-cat .treeview .collapsable > a:hover{
+.widget .product-cat .treeview .collapsable>a:hover {
   color: #ff7f00;
 }
 
-.productlist-img{
+.product-img.list{
+  height: 270px;
+}
+
+.productlist-img {
   background: #EBECE9;
   display: flex;
   justify-content: center;
   padding: 20px;
+  height: 100%;
+  position: relative;
 }
-.productlist-img img{
-  height: 300px;
+
+.product-img.list .productlist-img img {
+  width: 80%;
+  height: fit-content;
+  transform: translate();
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
