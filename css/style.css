@@ -2377,7 +2377,7 @@ table {
 }
 
 .product-img.list .productlist-img img {
-  width: 80%;
+  width: 170px;
   height: fit-content;
   transform: translate();
   position: absolute;
